@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+	<bean class="collection.Student" name="student1">
+		<property name="name">
+ 		<value>Rahul</value>
+ 		</property>
+ 		
+ 		<property name="phoneNo">
+ 			<list>
+ 				<value>7007581106</value>
+ 				<value>7007581106</value>
+ 				<value>7007581105</value>
+ 				<value>7007581104</value>
+ 				 <null />
+ 			</list>
+ 	</property>
+ 	
+ 	<property name="address">
+ 		<set>
+ 			<value>Azamgarh</value>
+ 			<value>Lucknow</value>
+ 			<value>Mau</value>
+ 			<value>Ballia</value>
+ 		</set>
+ 	</property>
+ 	
+ 	<property name="course">
+ 		<map>
+ 			<entry key="Java Course" value="2 Month" />
+ 			<entry key="Python Course" value="1 Month" />
+ 			<entry key="C++ Course" value="3 Month" />
+ 		</map>
+ 	</property>
+	
+	<property name="prop">
+		<props>
+			<prop key="name">durgesh</prop>
+			<prop key="course">C#</prop>
+		</props>
+	</property>
+	</bean>
+ 	
+ </beans>

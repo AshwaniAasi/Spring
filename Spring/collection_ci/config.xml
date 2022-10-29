@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:p="http://www.springframework.org/schema/p"
+xmlns:c="http://www.springframework.org/schema/c"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+ 	<bean class="collection_ci.Student" name="StudentXML">
+		<constructor-arg name="rollNo">
+			<value>101</value>
+		</constructor-arg>	
+		
+		<constructor-arg name="name">
+			<value>Ashwani</value>
+		</constructor-arg>	
+		
+		<constructor-arg name="phoneNo">
+			<list>
+ 				<value>7007581106</value>
+ 				<value>7007581106</value>
+ 				<value>7007581105</value>
+ 				<value>7007581104</value>
+ 				 <null />
+ 			</list>
+		</constructor-arg>
+		
+		<constructor-arg name="sub">
+			<set>
+				<value>English</value>
+				<value>Hindi</value>
+				<value>Math</value>
+				<value>Science</value>
+				<value>Social Science</value>
+				<value>Drawing</value>
+			</set>
+		</constructor-arg>
+		
+		<constructor-arg name="address">
+			<map>
+				<entry key="City" value="Azamgarh"/>
+				<entry key="State" value="UP"/>
+				<entry key="Country" value="India"/>
+			</map>
+		</constructor-arg>
+		
+		<constructor-arg name="prop">
+			<props>
+				<prop key="name" >Rahul</prop>
+				<prop key="sub" >Math</prop>
+			</props>
+		</constructor-arg>
+		
+ 	</bean>
+ </beans>
