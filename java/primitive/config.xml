@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+<!--  one bean create one object if trying multiple, thorw BeanDefinitionParsingException -->
+			<!-- bean by using tag-->
+ <!-- <bean class="primitive.Student" name="Student1">
+	<property name="studentId">
+		<value>01</value>
+	</property>
+	<property name="studentName">
+		<value>Ashwani Kumar Chaurasiya</value>
+	</property>
+	<property name="studentAddress">
+		<value>Lucknow</value>
+	</property>
+</bean>
+	<bean class="primitive.Student" name="Student2">
+		<property name="studentId">
+			<value>02</value>
+		</property>
+		<property name="studentName">
+			<value>Kumar Chaurasiya</value>
+		</property>
+		<property name="studentAddress">
+			<value>now</value>
+		</property>
+
+	</bean> -->
+
+	<!-- this is 2nd object & by using attributes -->
+	<!-- <bean class="primitive.Student" name="Student1">
+		<property name="studentId" value="100" />
+		<property name="studentName" value="Ashwani Kumar Chaurasiya" />
+		<property name="studentAddress" value="Lucknow" />
+	</bean> -->  
+ 					
+ <!-- <bean class="primitive.Student" name="Student2">
+ 	<property name="studentId" value="101" />
+ 	<property name="studentName" value="Anuradha Chaurasiya"/>
+ 	<property name="studentAddress" value="Kisundaspur" />
+ </bean>   -->
+ 
+ 	<!-- this is 3rd way by using p schema -->
+   	<!-- <bean class="primitive.Student" name="Student1"  p:studentId="101" p:studentName="Ashwani Kumar Chaurasiya"  p:studentAddress="Lucknow"/>
+ 	<bean class="primitive.Student" name="Student2"  p:studentId="102" p:studentName="Anuradha Chaurasiya" p:studentAddress="Kisundaspur"/> -->
+
+ </beans>

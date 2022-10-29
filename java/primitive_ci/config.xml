@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:p="http://www.springframework.org/schema/p"
+xmlns:c="http://www.springframework.org/schema/c"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+ 	<!-- 1st method -->
+ <!-- <bean class=" primitive_ci.Student" name="person1">
+ 	<constructor-arg>
+ 		<value>Ashwani</value>
+ 	</constructor-arg>
+ 	<constructor-arg>
+ 		<value>30</value>
+ 	</constructor-arg>
+ </bean> -->
+ 	
+ 	<!-- 2nd method -->
+ 	<!-- <bean class=" primitive_ci.Student" name="person1">
+ 	<constructor-arg value="Ashwani kumar" />
+ 	<constructor-arg value="28" /> 
+ </bean>-->
+ 
+ 					<!--  by reference object -->
+ 	<!-- <bean class="primitive_ci.Student" name="person1">
+ 		<constructor-arg value="Ashwani Chauraisya" />
+ 		<constructor-arg value="28" />
+ 		<constructor-arg ref="cer1" />
+ 	</bean>
+ 	 <bean class="primitive_ci.Certi" name="cer1">
+ 		<constructor-arg value="Java Certificates" />
+ 	</bean> -->
+ 	
+ 	
+ 	<!-- by c schema -->
+ 	<bean class="primitive_ci.Certi" name="cer1" c:name="Python Certificate" />
+ 	<bean class="primitive_ci.Student" name="person1"  c:name="Anushwi" c:age="25" c:certi-ref="cer1"/>
+ 	
+ </beans>
