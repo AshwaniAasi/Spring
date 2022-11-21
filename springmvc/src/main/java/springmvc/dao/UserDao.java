@@ -9,14 +9,14 @@ import springmvc.model.User;
 
 @Repository
 public class UserDao {
-	
+
 	@Autowired
 	private HibernateTemplate hibernateTemplate;
-		
+	
 	@Transactional
 	public int saveUser(User user)
 	{
-		int id= (Integer) this.hibernateTemplate.save(user);
+		int id=(Integer) this.hibernateTemplate.save(user);
 		return id;
 	}
 }

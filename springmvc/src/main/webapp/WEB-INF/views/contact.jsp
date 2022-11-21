@@ -32,9 +32,7 @@
 					id="exampleInputEmail1"
 					aria-describedby="emailHelp" 
 					placeholder="Enter Name"> 
-					<small
-					id="NameHelp" class="form-text text-muted">We'll never
-					share your Name or any Informations with anyone else. </small>
+					
 			</div>
 
 			<div class="form-group">
@@ -46,9 +44,7 @@
 					id="exampleInputEmail1" 
 					aria-describedby="emailHelp"
 					placeholder="Enter Email"> 
-					<small id="emailHelp"
-					class="form-text text-muted">We'll never share your email
-					with anyone else.</small>
+					
 			</div>
 
 			<div class="form-group">
@@ -67,7 +63,7 @@
 					out</label>
 			</div>
 
-			<button type="submit" class="btn btn-primary">Submit</button>
+			<button type="submit" class="btn btn-primary">Sign Up</button>
 
 		</form>
 	</div>

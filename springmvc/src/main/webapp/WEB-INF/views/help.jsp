@@ -15,27 +15,9 @@
 <%Integer rollNo1=(Integer)request.getAttribute("rollNo"); %>
 <%LocalDateTime ldt1=(LocalDateTime) request.getAttribute("time"); %> --%>
 
-	<h1>
-		Helper name is
-
-		<%-- <%=name1 %> --%>
-		${name}
-
-	</h1>
-
-	<h2>
-
-		Their rollNo is
-		<%-- <%=rollNo1 %> --%>
-		${rollNo}
-	</h2>
-
-	<h3>
-
-		The Time is
-		<%-- <%=ldt1 %> --%>
-		${time}
-	</h3>
+	<h1>Helper name is<%-- <%=name1 %> --%>${name}</h1>
+	<h2>Their rollNo is<%-- <%=rollNo1 %> --%>${rollNo}	</h2>
+	<h3>The Time is<%-- <%=ldt1 %> --%>${time}</h3>
 
 </body>
 </html>

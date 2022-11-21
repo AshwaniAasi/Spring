@@ -15,9 +15,10 @@
 	<h2>your password are - ${P }</h2> --%>
 	
 	<!-- after User class -->
-	<h1>Hello, ${user.nameJSP }</h1>
-	<h2>your email id = ${user.emailJSP}</h2>
-	<h3>your password are = ${user.passwordJSP}</h3>
+	<h1>Congratulation, ${user.nameJSP }</h1>
+	<h3 style="color: green;">Your form submitted successfully....</h3>
+	<%-- <h2>your email id = ${user.emailJSP}</h2>
+	<h3>your password are = ${user.passwordJSP}</h3> --%>
 	
 </body>
 </html>

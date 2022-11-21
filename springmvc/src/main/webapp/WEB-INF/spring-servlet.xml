@@ -10,46 +10,49 @@
  http://www.springframework.org/schema/context/spring-context.xsd
  http://www.springframework.org/schema/tx
  http://www.springframework.org/schema/tx/spring-tx.xsd">
-
- <tx:annotation-driven /> 
-
-					<!-- this is for first handler -->
-<context:component-scan base-package="springmvc.controller" />
-	
-					<!-- this is for view Resolver -->
-<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"	name="viewResolver">
-		<property name="prefix" value="/WEB-INF/views/" />
-		<property name="suffix" value=".jsp" />
-</bean>
-
-<bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" name="ds">
-		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://localhost:3306/springmvc" />
-		<property name="username" value="root" />
-		<property name="password" value="12345" />
-</bean>
-
-<bean class="org.springframework.orm.hibernate5.LocalSessionFactoryBean" name="factory">
-		<property name="dataSource" ref="ds" />
-		<property name="hibernateProperties">
-			<props>
-				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL57Dialect</prop>
-				<prop key="hibernate.show_sql">true</prop>
-				<prop key="hibernate.hbm2ddl.auto">update</prop>
-			</props>
-		</property>
-		<property name="annotatedClasses">
-			<list>
-				<value>springmvc.model.User</value>
-			</list>
-		</property>
-</bean>
-	
-<bean class="org.springframework.orm.hibernate5.HibernateTemplate" name="hibernateTemplate">
-		<property name="sessionFactory" ref="factory" />
-</bean>
-<bean class="org.springframework.orm.hibernate5.HibernateTransactionManager" name="transactionManager">
-		<property name="sessionFactory" ref="factory" />
-</bean>
-
-</beans>
+ 
+ <tx:annotation-driven/>
+ <context:component-scan base-package="springmvc"></context:component-scan>
+ 
+ <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" name="viewResolver">
+ 	<property name="prefix" value="/WEB-INF/views/"></property>
+ 	<property name="suffix" value=".jsp"></property>
+ </bean>
+ 
+ 
+ <bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" 
+ name="ds">
+ <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property>
+ <property name="url" value="jdbc:mysql://localhost:3306/springmvc"></property>
+ <property name="username" value="root"></property>
+ <property name="password" value="12345"></property>
+ </bean>
+ 
+ 
+ <bean class="org.springframework.orm.hibernate5.LocalSessionFactoryBean" 
+ name="factory">
+ <property name="dataSource" ref="ds"></property>
+<property name="hibernateProperties">
+	<props>
+		<prop key="hibernate.dialect">org.hibernate.dialect.MySQL57Dialect</prop>
+		<prop key="hibernate.show_sql">true</prop>
+		<prop key="hibernate.hbm2ddl.auto">update</prop>
+	</props>
+</property>
+<property name="annotatedClasses">
+	<list>
+		<value>springmvc.model.User</value>
+	</list>
+</property>
+ </bean>
+ 
+ <bean class="org.springframework.orm.hibernate5.HibernateTemplate" 
+ name="hibernateTemplate">
+ <property name="sessionFactory" ref="factory"></property>
+ </bean>
+ <bean class="org.springframework.orm.hibernate5.HibernateTransactionManager" 
+ name="transactionManager">
+ <property name="sessionFactory" ref="factory"></property>
+ </bean>
+ 
+ </beans>

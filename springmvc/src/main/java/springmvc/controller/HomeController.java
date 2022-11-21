@@ -20,10 +20,9 @@ public class HomeController {
 		model.addAttribute("id", 123);
 
 		List<String> list = new ArrayList<String>();
-		list.add("Sandhya");
-		list.add("Saya");
-		list.add("Sana");
-		list.add("dhya");
+		list.add("This is my home page...");
+		list.add("It is only for learning purpose");
+		
 		model.addAttribute("friends", list);
 
 		return "index";
